@@ -1,0 +1,65 @@
+/* @import "../../../utils/constants"; */
+
+.contactContainer {
+	flex: 1 1 0%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 2rem 0;
+}
+
+.contactContainer .divContainer {
+	height: 80%;
+	width: 80%;
+	display: flex;
+}
+
+.contactContainer .divContainer .sectionOne {
+	background-color: var(--primary-content);
+	flex: 1;
+	border-radius: 20px;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.contactContainer .divContainer .sectionTwo {
+	background-color: var(--primary-dark);
+	flex: 1;
+	/* border-radius: 0px 20px 20px 0px; */
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: var(--primary-content);
+	align-items: center;
+	gap: 2rem;
+}
+
+.contactContainer .divContainer .sectionTwo p {
+	font-size: 1.5rem;
+    font-family: "Kode Mono", monospace;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+	.contactContainer .divContainer {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.contactContainer .divContainer .sectionOne {
+		border-radius: 20px 20px 0px 0px;
+		padding: 50px 20px;
+	}
+
+	.contactContainer .divContainer .sectionTwo {
+		border-radius: 0px 0px 20px 20px;
+		padding: 50px 20px;
+		align-items: center;
+		gap: 2rem;
+	}
+}

@@ -1,0 +1,195 @@
+.cardContainer {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+}
+.cardContainer .card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -25%;
+    height: 500px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 25px;
+    padding: 50px;
+    transform-origin: top;
+}
+.cardContainer .card h2 {
+    /* text-align: center; */
+    margin: 0px;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Permanent Marker", cursive;
+
+}
+
+.cardContainer .card h4 {
+    /* text-align: center; */
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: oblique;
+    font-family: "Kode Mono", monospace;
+}
+
+.cardContainer .card .body {
+    display: flex;
+    height: 100%;
+    margin-top: 50px;
+    gap: 50px;
+}
+.cardContainer .card .body .description {
+    width: 40%;
+    position: relative;
+    /* top: 10%; */
+}
+.cardContainer .card .body .description p {
+    font-size: 16px;
+    font-family: "Kode Mono", monospace;
+}
+.cardContainer .card .body .description p::first-letter {
+    font-size: 28px;
+    font-family: 'Title';
+}
+.cardContainer .card .body .description span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.cardContainer .card .body .description span a {
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* .cardContainer .card .body .imageContainer {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+
+.cardContainer .card .body .imageContainer .inner {
+    width: 100%;
+    height: 100%;
+}
+.cardContainer .card .body .imageContainer img {
+    object-fit: cover;
+} */
+
+.cardContainer .card .body .stackContainer {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.cardContainer .card .body .stackContainer .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: ; */
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    
+}
+
+.cardContainer .card .body .stackContainer .inner .logoContainer{ 
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #ffffff54;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.3s;
+    border: 0.2px solid var(--primary-content);
+    /* box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem var(--primary-content);,
+    0 0 0.8rem var(--primary-content);,
+    0 0 2.8rem var(--primary-content);,
+    inset 0 0 1.3rem var(--primary-content);;  */
+    animation: pulsate 1.5s infinite alternate;  
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .cardContainer {
+        height: 90vh;
+    }
+
+
+    .cardContainer .card h2 {
+        font-size: 1rem;
+    }
+    
+    .cardContainer .card h4 {
+        font-size: 0.75rem;
+    }
+
+
+    .cardContainer .card .body {
+        margin-top: 20px;
+        gap: 5px;
+    }
+
+    .cardContainer .card .body .description p {
+        font-size: 0.8rem;
+    }
+
+    .cardContainer .card .body .stackContainer {
+        width: 30%;
+    }
+
+    .cardContainer .card .body .description {
+        width: 70%;
+    }
+
+    .cardContainer .card .body .stackContainer .inner .logoContainer{ 
+        width: 2rem;
+        height: 2rem;
+    }
+    
+}
+
+@keyframes pulsate {
+    
+    100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px var(--primary-content),
+        0 0 80px var(--primary-content),
+        0 0 90px var(--primary-content),
+        0 0 100px var(--primary-content),
+        0 0 150px var(--primary-content);
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px var(--primary-content),
+      0 0 45px var(--primary-content),
+      0 0 55px var(--primary-content),
+      0 0 70px var(--primary-content),
+      0 0 80px var(--primary-content);
+  
+  }
+}

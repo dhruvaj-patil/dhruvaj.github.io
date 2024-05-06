@@ -1,95 +1,104 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+// import Scene from "@/components/Scene";
+import dynamic from "next/dynamic";
+import { Text3dProps } from "@/components/3dText/index";
+import Contact from "@/components/contactUs";
+// import Text3d from "@/components/3dText/Text3d";
+
+const GlassEffect = dynamic(() => import("@/components/glassEffect/index"), {
+  ssr: false,
+});
+const TextOpacity = dynamic(
+  () => import("@/components/textOpacityScroll/index"),
+  { ssr: false }
+);
+const CardParallax = dynamic(() => import("@/components/cardParallax/index"), {
+  ssr: false,
+});
+const TrailingPixel = dynamic(
+  () => import("@/components/trailingPixels/index"),
+  { ssr: false }
+);
+const RotatingPhone = dynamic(
+  () => import("@/components/rotatingPhone/index"),
+  { ssr: false }
+);
+const Text3d = dynamic(() => import("@/components/3dText/index"), {
+  ssr: false,
+});
+const TiltCard = dynamic(() => import("@/components/tiltCard/index"), {
+  ssr: false,
+});
+
+// const GlassEffect = dynamic(() => import('@/components/glassEffect/index'), {ssr: false})
+
+// Highly skilled Full-Stack Developer with 5 years of experience building and deploying complex web applications.
+
+// Proven ability to design, develop, and maintain both front-end and back-end systems.
+
+// Extensive experience with modern technologies like React, Node.js, Java, AWS, and cloud-based solutions.
+
+// Strong leadership qualities, including mentoring junior developers and establishing technical roadmaps.
+const paragraph =
+  "Full-Stack Developer with 4+ years of experience building and deploying complex web applications. \nProven ability to design, develop, and maintain both front-end and back-end systems.";
+
+const contactDetails: Text3dProps[] = [
+  {
+    primary: "Call",
+    secondary: "(+91)7219080002",
+    url: "tel:+917219080002",
+  },
+  {
+    primary: "Email",
+    secondary: "dhruvaj.patil@gmail.com",
+    url: "mailto:dhruvaj.patil@gmail.com",
+  },
+];
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+    <main className="h-full">
+      {/* <GlassEffect
+        title="Dhruvaj Patil"
+        subtitle="Full-stack Software Developer"
+      /> */}
+      <TrailingPixel />
+
+      <div id="about_me" className={`${styles.section}`}>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <h1 className={`${styles.sectionHeader}`}>
+            Introduction
+          </h1>
+        </div>
+        <TextOpacity paragraph={paragraph} />
+      </div>
+      {/* <div className="h-full">
+      </div> */}
+      <div id="experience"className={`${styles.section}`}>
+        <h1 className={`${styles.sectionHeader}`}>
+          Experience
+        </h1>
+        <CardParallax />
+      </div>
+      <div id="contact" className={`${styles.section} h-2/3`}>
+        <h1 className={`${styles.sectionHeader}`}>
+          Contact
+        </h1>
+        <div>
+          <Contact url={"mailto:dhruvaj.patil@gmail.com"} />
         </div>
       </div>
+      {/* <div className="w-full h-full p-40">
+        <TiltCard />
+      </div> */}
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      {/* 
+      <div id="footer" className="mt-40 ">
+        <h1 className={`${styles.sectionHeader}`}>
+          Footer
+        </h1>
+      </div> */}
     </main>
   );
 }
