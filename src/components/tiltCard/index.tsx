@@ -31,7 +31,7 @@ const TiltCard = () => {
 
   const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: any) => {
     console.log("🚀 ~ handleMouseMove ~ e:", e)
     if (!ref.current) return [0, 0];
   

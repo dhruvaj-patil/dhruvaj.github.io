@@ -12,7 +12,7 @@ function Todo() {
       className="h-svh w-full bg-black"
       style={{ height: "100vh"}}
     >
-      <Scene />
+      <Scene title='test' />
     </div>
   );
 }

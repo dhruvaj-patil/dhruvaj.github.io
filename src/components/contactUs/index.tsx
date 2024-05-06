@@ -22,7 +22,7 @@ function Contact({url}: {url: string}) {
             {/* <TiltCard/> */}
             <div>
               <p>
-                Let's make something extraordinary together.
+                Let&apos;s make something extraordinary together.
               </p>
             </div>
             <FlikrButton url={url} />

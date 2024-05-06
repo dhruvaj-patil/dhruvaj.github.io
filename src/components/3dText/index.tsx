@@ -10,7 +10,7 @@ export type Text3dProps = {
     className?: string
 };
 
-export default function index({ texts }: { texts: Text3dProps[] }) {
+export default function Index({ texts }: { texts: Text3dProps[] }) {
   console.log("🚀 ~ index ~ props:", texts);
 
   const plane = useRef<HTMLDivElement>(null);
@@ -36,8 +36,8 @@ export default function index({ texts }: { texts: Text3dProps[] }) {
       //   className='left-3/4'
     >
       <div ref={plane} className={`${styles.body} `}>
-        {texts.map((prop) => (
-          <Text3d {...prop} />
+        {texts.map((prop, i) => (
+          <Text3d {...prop} key={`i_${prop.url}`} />
         ))}
       </div>
     </div>

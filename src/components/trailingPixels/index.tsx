@@ -2,7 +2,7 @@
 import styles from './trailingpixel.module.css'
 import { useState, useEffect } from 'react';
 
-export default function index() {
+export default function TrailingPixels() {
 
   const [windowsWidth, setWindowsWidth] = useState(0);
 
