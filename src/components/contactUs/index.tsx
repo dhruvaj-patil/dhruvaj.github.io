@@ -15,8 +15,8 @@ function Contact({url}: {url: string}) {
           <div className={style.sectionOne}>
             <div>
             <CldImage
-                    width="760"
-                    height="760"
+                    width="824"
+                    height="516"
                     src={'/contact/handshake_l1pco1.png'}
                     sizes="100vw"
                     alt="Let's get in Touch"
