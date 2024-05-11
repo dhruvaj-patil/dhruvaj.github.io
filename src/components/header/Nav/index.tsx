@@ -36,6 +36,7 @@ export default function index() {
                 animate="enter"
                 exit="exit"
                 key={`f_${i}`}
+                href={href}
               >
                 {title}
               </motion.a>

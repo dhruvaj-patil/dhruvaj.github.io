@@ -13,18 +13,18 @@ export const footerLinks = [
 export const links = [
   {
     title: "Home",
-    href: "/#",
+    href: "./#",
   },
   {
     title: "About Me",
-    href: "/#about_me",
+    href: "./#about_me",
   },
   {
     title: "Experience",
-    href: "/#experience",
+    href: "./#experience",
   },
   {
     title: "Contact Me",
-    href: "/#contact",
+    href: "./#contact",
   },
 ];

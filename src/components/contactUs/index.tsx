@@ -1,7 +1,9 @@
+"use client"
 import React from 'react'
 import style from './contact.module.css';
 import dynamic from 'next/dynamic';
 import FlikrButton from '../flikerButton';
+import { CldImage } from 'next-cloudinary';
 // const HANDSHAKEIMG = require("../../../public/contact/handshake.svg");
 
 
@@ -12,10 +14,18 @@ function Contact({url}: {url: string}) {
         <div className={style.divContainer}>
           <div className={style.sectionOne}>
             <div>
-              <img
+            <CldImage
+                    width="100"
+                    height="100"
+                    src={'/contact/handshake_l1pco1.png'}
+                    sizes="100vw"
+                    alt="Let's get in Touch"
+                    className={style.img}
+                  />
+              {/* <img
                 src={"/contact/handshake.svg"}
                 alt="Your SVG description"
-              ></img>
+              ></img> */}
             </div>
           </div>
           <div className={style.sectionTwo}>

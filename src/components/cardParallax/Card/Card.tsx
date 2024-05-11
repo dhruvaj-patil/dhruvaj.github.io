@@ -74,7 +74,7 @@ const Card = ({
                     height="64"
                     src={url}
                     // sizes="100vw"
-                    alt="Description of my image"
+                    alt={tech}
                   />
                   {/* <p>{tech}</p> */}
                 </div>
