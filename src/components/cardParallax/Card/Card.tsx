@@ -1,30 +1,40 @@
-'use client'
-import Image from 'next/image';
-import styles from './card.module.css';
-import { useTransform, motion, useScroll, MotionValue } from 'framer-motion';
-import { useRef } from 'react';
-import { Job } from '../data';
-
-
-
+"use client";
+import Image from "next/image";
+import styles from "./card.module.css";
+import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
+import { useRef } from "react";
+import { Job } from "../data";
+import { CldImage } from "next-cloudinary";
 
 export type FramerMotionProps = {
-    progress: MotionValue<number>;
-    range: number[];
-    targetScale?: number;
-}
+  progress: MotionValue<number>;
+  range: number[];
+  targetScale?: number;
+};
 
-const Card = ({i, title, description, location, position, stack, year, color, progress, range, targetScale, jobType}: Job & FramerMotionProps & {i:number}) => {
-
+const Card = ({
+  i,
+  title,
+  description,
+  location,
+  position,
+  stack,
+  year,
+  color,
+  progress,
+  range,
+  targetScale,
+  jobType,
+}: Job & FramerMotionProps & { i: number }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start end', 'start start']
-  })
+    offset: ["start end", "start start"],
+  });
 
-  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1])
+  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
- 
+
   return (
     <div ref={container} className={styles.cardContainer}>
       <motion.div
@@ -58,13 +68,13 @@ const Card = ({i, title, description, location, position, stack, year, color, pr
             <motion.div className={styles.inner} style={{ scale: imageScale }}>
               {stack?.map(({ tech, url }, i) => (
                 <div key={`${tech}_${i}`} className={styles.logoContainer}>
-                  <Image
-                    src={`/techLogo/${url}`}
-                    alt="image"
-                    width={64}
-                    height={64}
-                    className='w-8 md:w-12 h-auto'
-                    // sizes=""
+
+                  <CldImage
+                    width="64"
+                    height="64"
+                    src={url}
+                    // sizes="100vw"
+                    alt="Description of my image"
                   />
                   {/* <p>{tech}</p> */}
                 </div>
@@ -75,6 +85,6 @@ const Card = ({i, title, description, location, position, stack, year, color, pr
       </motion.div>
     </div>
   );
-}
+};
 
-export default Card
+export default Card;

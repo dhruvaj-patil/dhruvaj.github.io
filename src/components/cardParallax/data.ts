@@ -21,12 +21,12 @@ export const jobExperiences: Job[] = [
     description:
       "Developed and designed web and mobile applications across various projects, utilizing JAMstack architecture.",
     stack: [
-      { tech: "React-Native", url: "react.png" },
-      { tech: "Redux", url: "redux.png" },
-      { tech: "Strapi", url: "strapi.png" },
-      { tech: "GraphQL", url: "graphql.png" },
-      { tech: "Hasura", url: "hasura.png" },
-      { tech: "Angular", url: "angular.png" },
+      { tech: "React-Native", url: "techLogo/react_wvgp1e.png" },
+      { tech: "Redux", url: "techLogo/redux_c7ncli.png" },
+      { tech: "Strapi", url: "techLogo/strapi_jcs69h.png" },
+      { tech: "GraphQL", url: "techLogo/graphql_muergc.png" },
+      { tech: "Hasura", url: "techLogo/hasura_bsjdns.png" },
+      { tech: "Angular", url: "techLogo/angular_opkr5j.png" },
     ],
     color: "#EFBC9B",
   },
@@ -40,35 +40,35 @@ export const jobExperiences: Job[] = [
       "Modernized legacy applications by migrating to microservices architecture with Spring Boot and Micronaut. Implemented secure API gateways and JWT authentication for enhanced system access. Championed innovation by developing a successful POC using GraalVM and Micronaut to improve cold-start performance on AWS Lambda.",
     // , GraphqlDGS, Apollo Federation, Micronaut, EKS, Lambda, API-gateway, Cloudwatch, Docker.
     stack: [
-      { tech: "Spring-boot", url: "spring-boot.png" },
-      { tech: "GraphqlDGS", url: "dgs-graphql.png" },
-      { tech: "Apollo Federation", url: "apollo-graphql.png" },
-    //   { tech: "Micronaut", url: "micronaut.png" },
+      { tech: "Spring-boot", url: "techLogo/spring-boot_ayry0o.png" },
+      { tech: "GraphqlDGS", url: "techLogo/dgs-graphql_a5tss3.png" },
+      { tech: "Apollo Federation", url: "techLogo/apollo-graphql_gdbnln.png" },
+    //   { tech: "Micronaut", url: "techLogo/micronaut_salder.png" },
     //   { tech: "AWS (Lambda, EKS, API Gateway, Cloudwatch, S3)", url: "" }, //TODO: seperate it out
-      { tech: "", url: "aws-lambda.png" }, //TODO: seperate it out
-      { tech: "", url: "aws-api-gateway.png" },
-      { tech: "", url: "s3.png" },
+      { tech: "", url: "techLogo/aws-lambda_ly2uya.png" }, //TODO: seperate it out
+      { tech: "", url: "techLogo/aws-api-gateway_iqpdjj.png" },
+      { tech: "", url: "techLogo/s3_kwtkpz.png" },
 
-      { tech: "Docker", url: "docker.png" },
+      { tech: "Docker", url: "techLogo/docker_qpqkuq.png" },
     ],
     color: "#FBF3D5",
   },
-  {
-    title: "Pixibo",
-    location: "Singapore",
-    position: "Fullstack Developer",
-    jobType: 'Remote',
-    year: "Dec 2021 - Feb 2022",
-    description:
-      "Contributed to a startup by implementing new features, resolving bugs, and building a data analytics function using Node.js and AWS Lambda",
-    stack: [
-      { tech: "React", url: "react.png" },
-      { tech: "NextJS", url: "nextjs.png" },
-      { tech: "GraphQL", url: "graphql.png" },
-      { tech: "AWS Lambda", url: "aws-lambda.png" },
-    ],
-    color: "#D6DAC8",
-  },
+  // {
+  //   title: "Pixibo",
+  //   location: "Singapore",
+  //   position: "Fullstack Developer",
+  //   jobType: 'Remote',
+  //   year: "Dec 2021 - Feb 2022",
+  //   description:
+  //     "Contributed to a startup by implementing new features, resolving bugs, and building a data analytics function using Node.js and AWS Lambda",
+  //   stack: [
+  //     { tech: "React", url: "techLogo/react_wvgp1e.png" },
+  //     { tech: "NextJS", url: "nextjs.png" },
+  //     { tech: "GraphQL", url: "graphql.png" },
+  //     { tech: "AWS Lambda", url: "https://res.cloudinary.com/dhruvaj/image/upload/v1715174028/techLogo/aws-lambda_ly2uya.png" },
+  //   ],
+  //   color: "#D6DAC8",
+  // },
   {
     title: "Encora",
     location: "Pune, India",
@@ -78,10 +78,12 @@ export const jobExperiences: Job[] = [
     description:
       "Led the development of a comprehensive IoT dashboard with data visualization and backend architecture using React, Java (Micronaut), Docker, and cloud services (Lambda, ECS, RDS). Mentored an intern and established a development roadmap for efficient code management.",
     stack: [
-      { tech: "React", url: "react.png" },
-      { tech: "Typescript", url: "typescript.png" },
-      { tech: "Java (Micronaut)", url: "micronaut.png" },
-      { tech: "Docker", url: "docker.png" },
+      { tech: "React", url: "techLogo/react_wvgp1e.png" },
+      { tech: "Typescript", url: "techLogo/typescript_dgeeef.png" },
+      { tech: "Java (Micronaut)", url: "techLogo/micronaut_salder.png" },
+      { tech: "Docker", url: "techLogo/docker_qpqkuq.png" },
+      { tech: "RDS", url: "techLogo/aws-rds_lqjxym.png" },
+
     //   { tech: "AWS (Lambda, ECS, RDS)", url: "" },
     //   { tech: "Third-party Vendors", url: "" },
     ],
@@ -96,13 +98,14 @@ export const jobExperiences: Job[] = [
     description:
       "Enhanced and maintained a PLM tool, tackling problems at scale. Crafted Cypress end-to-end (e2e) test cases to ensure quality.",
     stack: [
-      { tech: "React", url: "react.png" },
-      { tech: "MobX", url: "mobx.png" },
-      { tech: "Cypress", url: "cypress.png" },
-      { tech: "Elasticsearch", url: "elasticSearch.png" },
-      { tech: "Docker", url: "docker.png" },
+      { tech: "React", url: "techLogo/react_wvgp1e.png" },
+      { tech: "MobX", url: "techLogo/mobx_gst0xi.png" },
+      { tech: "Cypress", url: "techLogo/cypress_tyjhwa.png" },
+      { tech: "Elasticsearch", url: "techLogo/elasticSearch_q0vkmc.png" },
+      { tech: "Docker", url: "techLogo/docker_qpqkuq.png" },
+      { tech: "SQS", url: "techLogo/aws-sqs_ejlsdv.png" },
     //   { tech: "AWS (Lambda, Cloudwatch, SQS)", url: "" },
-      { tech: "NestJS", url: "nestjs.png" },
+      { tech: "NestJS", url: "techLogo/nestjs_hocc1z.png" },
     ],
     color: "#9CAFAA",
   },
